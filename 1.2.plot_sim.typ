@@ -10,7 +10,7 @@
     xlabel: [*$V_(G S)$* [V]],
     ylabel: [*$V_(o u t)$* [V]],
     legend: (position: left + horizon),
-    ylim: (-0.001, 5),
+    ylim: (-0.001, 5.15),
 
     cycle: (
       it => {

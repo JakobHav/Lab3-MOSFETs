@@ -48,7 +48,7 @@
 
 
 #v(10pt)
-#align(center)[#line(stroke: 0.3pt, length: 80%)]
+// #align(center)[#line(stroke: 0.3pt, length: 80%)]
 #v(10pt)
 #show: lq.theme.skyline
 
