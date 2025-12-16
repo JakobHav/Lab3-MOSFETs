@@ -97,6 +97,17 @@ The Power MOSFET operates way under its normal current, ($I_D < 10$ mA here and 
 
 === Text Questions:
 
+#table(
+  columns: 3,
+  inset: 5pt,
+  // align: horizon,
+  align: (left, left, center),
+  table.header([*$I_D$* \[mA\]], [*$V_(i n)$* \[V\]], [*actual $V_(i n)$* \[V\]]),
+  [3.3], [2.11], [2.310],
+  [6.6], [2.17], [2.391],
+  [10.0], [2.21], [2.435],
+)
+
 
 === Conclusion
 
