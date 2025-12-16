@@ -118,6 +118,16 @@ The Power MOSFET operates way under its normal current, ($I_D < 10$ mA here and 
 #include "1.3.plot_sim.typ"
 
 === Text Questions:
+
+#table(
+  columns: 3,
+  inset: 5pt,
+  align: horizon,
+  table.header([*signal*], [*rise time*], [*fall time*]),
+  [$V_(i n)$], [1 $mu$s], [1 ms],
+  [$V_(o u t)$], [80 $mu$s], [0.12 $mu$s],
+)
+
 === Conclusion:
 = 3.3.2. Measurement
 
