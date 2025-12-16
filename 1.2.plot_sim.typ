@@ -75,15 +75,15 @@
         it
       },
       it => {
-        set lq.style(stroke: (paint: purple.darken(-20%), thickness: 1.8pt, dash: "solid"))
+        set lq.style(stroke: (paint: purple.darken(-20%), thickness: 1.4pt, dash: "solid"))
         it
       },
       it => {
-        set lq.style(stroke: (paint: red, thickness: 1.8pt))
+        set lq.style(stroke: (paint: red, thickness: 1.4pt))
         it
       },
       it => {
-        set lq.style(stroke: (paint: blue.darken(-20%), thickness: 1.8pt))
+        set lq.style(stroke: (paint: blue.darken(-20%), thickness: 1.4pt))
         it
       },
     ),
@@ -107,7 +107,7 @@
       stroke: (
         dash: "dashed",
         paint: green.darken(10%),
-        thickness: 0.5pt,
+        thickness: 0.8pt,
       ),
       label: "l. fit",
     ),
