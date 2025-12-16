@@ -146,7 +146,7 @@ We added a series resistance of 10 $Omega$ for the inductor.
 === Circuit Diagrams:
 
 #figure(caption: [LTSpice circuit diagram])[
-  // #image("assets/2.4.1.circuit.jpg", width: 35%)
+  #image("assets/3.4.1.jpg", width: 55%)
 ] <fig13>
 
 === Plots:
