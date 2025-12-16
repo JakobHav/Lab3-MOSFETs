@@ -1,5 +1,5 @@
 #import "@preview/lilaq:0.5.0" as lq
-#let (vin, vout, id) = lq.load-txt(read("assets/3.2.1.sim.txt"), delimiter: "\t", skip-rows: 24)
+#let (vin, vout, id) = lq.load-txt(read("LTSpice/3.2.1.txt"), delimiter: "\t", skip-rows: 1)
 
 #show: lq.theme.skyline
 
@@ -7,12 +7,10 @@
   #lq.diagram(
     width: 80%,
     height: 22%,
-    // title: [],
-    xlabel: [*$V_(i n)$* [V]],
-    ylabel: [*$V_(o u t)$* [$mu$A]],
-    legend: (position: left + top),
-    // xlim: (-0.01, 0.8),
-    // ylim: (-0.01, 37),
+    xlabel: [*$V_(G S)$* [V]],
+    ylabel: [*$V_(o u t)$* [V]],
+    legend: (position: left + horizon),
+    ylim: (-0.001, 5),
 
     cycle: (
       it => {
@@ -37,8 +35,10 @@
       position: right,
       label: [*$I_D$* [mA]],
       lq.plot(vin, id.map(x => x * 1000), mark: ".", label: [$I_D$], mark-size: 0pt),
-      lim: (-1, 26),
+      lim: (-0.01, 26),
     ),
   )
 ]
+
+// #panic(id.slice(-10, -1)))
 

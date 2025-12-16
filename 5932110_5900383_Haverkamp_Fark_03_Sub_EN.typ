@@ -54,6 +54,8 @@ Milan Fark
 
 === Text Questions:
 
+The maximum current is with $V_(G S) = 2.4$ V at the end and has a value of $I_D approx 24.87$ mA
+
 === Conclusion:
 
 == 3.2.2. Measurement
