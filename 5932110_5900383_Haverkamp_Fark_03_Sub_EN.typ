@@ -196,4 +196,20 @@ Section 3.4.2. is about
 
 === Text Questions:
 
+#table(
+  columns: 2,
+  inset: 5pt,
+  align: horizon,
+  table.header([*frequency*], [*average voltage*]),
+  [100],[4.69],
+  [200],[4.74],
+  [500],[4.78],
+  [1k],[6.27],
+  [2k],[8.44],
+  [5k],[12.99],
+  [10k],[18.52],
+  [20k],[26.67],
+  [50k],[32.10],
+)
+
 === Conclusion
