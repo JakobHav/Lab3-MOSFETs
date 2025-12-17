@@ -45,7 +45,7 @@ Milan Fark
 
 === Circuit Diagrams:
 
-#figure(caption: [LTSpice circuit diagram of MOSFET Characteristics])[
+#figure(caption: [LTSpice _MOSFET Characteristics_ circuit diagram])[
   #image("assets/3.2.1.jpg", width: 39%)
 ] <fig1>
 
@@ -121,7 +121,7 @@ The Power MOSFET operates way under its normal current, ($I_D < 10$ mA here and 
 
 === Circuit Diagrams:
 
-#figure(caption: [LTSpice circuit diagram for MOS logic gate])[
+#figure(caption: [LTSpice _MOS logic gate_ circuit diagram])[
   #image("assets/3.3.1.jpg", width: 35%)
 
 ]<fig9>
@@ -168,7 +168,7 @@ We added a series resistance of 10 $Omega$ for the inductor.
 
 === Circuit Diagrams:
 
-#figure(caption: [LTSpice circuit diagram])[
+#figure(caption: [LTSpice _step-up converter_ circuit diagram])[
   #image("assets/3.4.1.jpg", width: 55%)
 ] <fig13>
 
