@@ -97,15 +97,17 @@ The Power MOSFET operates way under its normal current, ($I_D < 10$ mA here and 
 
 === Text Questions:
 
+5 V through WaveForms is less than 5v on the board
+
 #table(
-  columns: 3,
+  columns: 4,
   inset: 5pt,
   // align: horizon,
-  align: (left, left, center),
-  table.header([*$I_D$* \[mA\]], [*$V_(i n)$* \[V\]], [*actual $V_(i n)$* \[V\]]),
-  [3.3], [2.11], [2.310],
-  [6.6], [2.17], [2.391],
-  [10.0], [2.21], [2.435],
+  align: (left, left, center, center),
+  table.header([*$I_D$* \[mA\]], [*$V_(i n)$* \[V\]], [*actual $V_(i n)$* \[V\]], [*final $V_(i n)$*]),
+  [3.3], [2.11], [2.310], [2.320],
+  [6.6], [2.17], [2.391], [2.377],
+  [10.0], [2.21], [2.435], [2.418],
 )
 
 
@@ -119,8 +121,8 @@ The Power MOSFET operates way under its normal current, ($I_D < 10$ mA here and 
 
 === Circuit Diagrams:
 
-#figure(caption: [LTSpice circuit diagram for the common emitter amplifier])[
-  // #image("assets/2.3.1.circuit.jpg", width: 62%)
+#figure(caption: [LTSpice circuit diagram for MOS logic gate])[
+  #image("assets/3.3.1.jpg", width: 35%)
 
 ]<fig9>
 

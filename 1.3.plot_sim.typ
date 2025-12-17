@@ -37,7 +37,7 @@
       position: top,
       label: [relative *$t$* for *$V_(i n)$* [$mu$s]],
       lq.plot(t.map(x => (x - 10) * 1000), vi, mark: ".", label: [$V_(i n)$], mark-size: 0pt),
-      lim: (-1, 2),
+      lim: (-4.5, 6),
     ),
 
 
@@ -60,7 +60,7 @@
     ylabel: [*amplitude* [V]],
     legend: (position: right + horizon),
     ylim: (-0.5, 5.5),
-    xlim: (-.12, .10),
+    xlim: (-1.21, 1.0),
     cycle: (
       it => {
         set lq.style(stroke: (paint: blue.darken(-20%).transparentize(20%), thickness: 1.5pt, dash: "solid"))
@@ -81,7 +81,7 @@
       position: top,
       label: [relative *$t$* for *$V_(i n)$* [$m$s]],
       lq.plot(t.map(x => (x - 20.5)), vi, mark: ".", label: [$V_(i n)$], mark-size: 0pt),
-      lim: (-0.900, 0.800),
+      lim: (-1.21, 1.00),
     ),
 
 
