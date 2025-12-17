@@ -17,7 +17,7 @@
 #Amplitude: 2 V
 #Offset: 2 V
 #Symmetry: 50 %
-#Phase: 0 °
+#Phase: 0
 
 Time (s)	Vg (V)	Id (A)
 -0.0256	0.09430876367021757	0.0001500581788749528
