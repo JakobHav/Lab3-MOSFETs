@@ -14,7 +14,7 @@
 #Amplitude: 2.5 V
 #Offset: 2.5 V
 #Symmetry: 60 %
-#Phase: 0 °
+#Phase: 0
 #Wavegen Channel 2: Enabled
 #Mode: Simple
 #Type: DC
