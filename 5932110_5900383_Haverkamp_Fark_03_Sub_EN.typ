@@ -43,7 +43,7 @@ Milan Fark
 
 === Introduction
 
-In section 3.2.1., we looked at and simulated a basic MOSFET voltage inverting circuit shown in @fig1 and performed a voltage sweep on the gate of the MOSFET to analyze the output voltage and current through the resistor $R_D = 200 Omega$, which is shown in @fig2.
+In section 3.2.1., we looked at and simulated a basic MOSFET voltage inverting circuit shown in @fig1 and performed a voltage sweep on the gate of the MOSFET to analyze the output voltage and current through the resistor $R_D = 200 Omega$, shown in @fig2.
 
 We also sweeped _VDD_ from 0 V to 5 V to look at the current through $R_D$ for different voltages applied at the drain end of the transistor.
 
@@ -91,7 +91,7 @@ For $2.03" V" <= V_(G S) <= 3.15" V"$ there is a transition stage, where the cur
 == 3.2.2. Measurement
 
 === Introduction
-
+In this section, the goal was to measure and plot the characteristics of a MOSFET transistor and determine the early voltage.
 === Circuit Diagrams:
 
 #figure(caption: [Schematic of the _MOSFET characteristics_ circuit])[
@@ -104,7 +104,7 @@ For $2.03" V" <= V_(G S) <= 3.15" V"$ there is a transition stage, where the cur
 
 === Text Questions:
 
-The deviation seen between "*$V_(i n)$*", "*$W 1 "values"$*" and "*final $V_(i n)$*" in @vins happen for once because 5 V through WaveGen is less than 5 V when directly measured on the board and secondly because "final" $V_(i n)$ is connected to the circuit while WaveGen $V_(i n)$ was to be measured stand alone.
+The deviation seen between "*$V_(i n)$*", "*$W 1 "values"$*" and "*final $V_(i n)$*" in @vins happen firstly because 5 V through WaveGen is less than 5 V when directly measured on the board and secondly because "final" $V_(i n)$ is connected to the circuit while WaveGen $V_(i n)$ was to be measured stand alone.
 
 #figure(caption: [Different $V_(i n)$ values for given $I_D$])[
   #table(
