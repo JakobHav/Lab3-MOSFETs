@@ -75,7 +75,7 @@
     lq.plot(freq, values, mark: ".", mark-size: 0pt),
   )
 
-]
+]<fig16>
 
 #let (t, d0) = lq.load-txt(read("assets/3.4.2.D0.txt"), delimiter: "\t", skip-rows: 24)
 #let (t, d10) = lq.load-txt(read("assets/3.4.2.D10.txt"), delimiter: "\t", skip-rows: 24)
@@ -138,4 +138,4 @@
     lq.plot(freq, values, mark: ".", mark-size: 0pt),
   )
 
-]
+]<fig17>
