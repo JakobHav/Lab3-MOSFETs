@@ -172,8 +172,6 @@ We added a series resistance of 10 $Omega$ for the inductor.
   #image("assets/3.4.1.jpg", width: 55%)
 ] <fig13>
 
-=== Plots:
-#include "1.4.plot_sim.typ"
 
 === Text Questions:
 
@@ -193,6 +191,9 @@ Section 3.4.2. is about
 #figure(caption: [Schematic of the _step-up converter_ circuit])[
   #image("assets/3.4.2.circuit.jpg", width: 69%)
 ]
+
+=== Plots:
+#include "1.4.plot_real.typ"
 
 === Text Questions:
 

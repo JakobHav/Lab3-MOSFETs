@@ -65,7 +65,7 @@
     height: 21%,
     xlabel: [*$V_(D D)$* [V]],
     ylabel: [*$I_D$* [mA]],
-    legend: (position: right + horizon, dx: 0pt, dy: -16.5pt),
+    legend: (position: right + horizon, dx: 10pt, dy: -10.5pt),
     xlim: (-0.001, 5.1),
     ylim: (-0.001, 12),
 
@@ -101,16 +101,16 @@
     lq.plot(vin, id_1.map(x => x * 1000), mark: ".", label: [$2.19$], mark-size: 0pt),
 
 
-    lq.line(
-      (0, 0),
-      (2.15 * 2, ax3 * 1000 * 2),
-      stroke: (
-        dash: "dashed",
-        paint: green.darken(10%),
-        thickness: 0.8pt,
-      ),
-      label: "l. fit",
-    ),
+    // lq.line(
+    //   (0, 0),
+    //   (2.15 * 2, ax3 * 1000 * 2),
+    //   stroke: (
+    //     dash: "dashed",
+    //     paint: green.darken(10%),
+    //     thickness: 0.8pt,
+    //   ),
+    //   label: "l. fit",
+    // ),
   )
 ] <fig3>
 
