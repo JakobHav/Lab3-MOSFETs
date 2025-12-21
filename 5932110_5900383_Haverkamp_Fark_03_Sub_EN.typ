@@ -139,7 +139,7 @@ The rising edge can be seen in @rise. $V_(i n)$ has a very linear rising edge, w
 
 The falling edge of $V_(i n)$ is also very linear, $V_(o u t)$ is also linear, but a little round at the beginning. The fall time of $V_(o u t)$ is much faster than that of $V_(i n)$, by a factor of $m approx 10000$, as seen in @risetimes.
 
-#figure(caption: [Rise and fall times for $V_(i n)$ and $V_(o u t)$])[
+#figure(caption: [Simulated rise and fall times for $V_(i n)$ and $V_(o u t)$])[
   #table(
     columns: 3,
     inset: 5pt,
@@ -164,11 +164,15 @@ We successfully simulated the inverter. The falling and rising edges of $V_(i n)
 = 3.3.2. Measurement
 
 === Introduction
+
+In Chapter 3.3.2., we used the _MOSFET characteristics_ circuit on the board, which is shown in @moschar to measure the rising and falling edge transitions.
+
+
 === Circuit Diagrams:
 
 #figure(caption: [Schematic of the _MOSFET characteristics_ circuit])[
   #image("assets/3.2.2.circuit.jpg", width: 27%)
-] <fig11>
+] <moschar>
 === Plots:
 
 #include "1.3.plot_real.typ"
@@ -185,10 +189,28 @@ We successfully simulated the inverter. The falling and rising edges of $V_(i n)
     [$V_(o u t)$], [-0.11], [5.03],
   )] <minmax>
 
+#figure(caption: [Measured rise and fall times for $V_(i n)$ and $V_(o u t)$])[
+  #table(
+    columns: 3,
+    inset: 5pt,
+    align: horizon,
+    table.header([*signal*], [*rise time* [$mu$s]], [*fall time* [$mu$s]]),
+    [$V_(i n)$], [2], [0.16],
+    [$V_(o u t)$], [5], [5 ],
+    [$t_(p d)$], [1.15], [1.25],
+  )] <risetimes_real>
+
+
+As seen in @risetimes_real, the $t_(p d\(f a l l\))$ and $t_(p d\(r i s e\))$ times are not really comparable, as $t_(p d\(r i s e\))$ is much smaller and $t_(p d\(f a l l\))$ is much, much bigger and not negative.
+
+One reason for this is that the rise time of $V_(o u t)$ is much smaller than the simulated one. For the fall delay, the biggest reason is the fall time of $V_(i n)$ being $t_"f" = 0.16 space mu$s, instead of a simulated $t_"f" = 1 " ms"$. The measured delays make a lot more sense than the simulated ones.
+
 === Conclusion
 
 We successfully measured the inverter signal we simulated earlier. \
-The rise and fall edges are similar to the simulation, although the fall time of $V_in$ is faster by orders of magnitude.
+The rise and fall edges are similar to the simulation, although the fall time of $V_(i n)$ is faster by orders of magnitude and the rise time of $V_(o u t)$ is also much quicker.
+
+The measured delay times make a lot of sense and are $t_(p d) approx 1.2 space mu$s both for rising and falling.
 
 = 3.4. Step up converter
 
