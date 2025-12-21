@@ -257,7 +257,6 @@ Section 3.4.2 is about the measurement of the step up converter and the interpre
 === Plots:
 #include "1.4.plot_real.typ"
 
-#pagebreak()
 === Text Questions:
 
 The output signal measured at $M P_21$ is a saw wave, which starts low and rises with each period, until reaching a maximum amplification and staying in the saw wave pattern.
