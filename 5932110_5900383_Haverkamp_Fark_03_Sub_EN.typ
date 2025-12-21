@@ -221,7 +221,7 @@ The measured delay times make a lot of sense and are $t_(p d) approx 1.2 space m
 
 === Introduction
 
-We added a series resistance of 10 $Omega$ for the inductor.
+In this section we used the MOSFET transistor to build a step up converter, to amplify a dc input voltage to a higher and slightly variable dc output voltage. This is accomplished by turning the transistor on and of via a variable input voltage. This leads to a wave effect between the transistor $M_1$ and the capacitor via the coils electromagnetic properties. In the simulation we gave the coil $L_1$ a series resistance of 10 $Omega$. 
 
 === Circuit Diagrams:
 
@@ -255,11 +255,11 @@ Section 3.4.2 is about the measurement of the step up converter and the interpre
 
 === Text Questions:
 
-The output signal measured at $M p_21$ is a saw wave, which starts low and rises with each period, until reaching a maximum amplification and staying in the saw wave pattern.
+The output signal measured at $M P_21$ is a saw wave, which starts low and rises with each period, until reaching a maximum amplification and staying in the saw wave pattern.
 
 As seen in @fig16 the average output voltage rises with increasing frequency, because the amplification circuit is switching more often, therefor leading to a higher amplification.
 
-In contrast to the frequency, the duty cycle maxes out its ability to amplify the voltage at around 40% (@fig17). This is because the switching of the transistor needs to happen at the right intervals for the amplifier to work. In the measurement this is at 40%, in contrast to the simulation, where the maximum amplification is achieved at 50%. This is probably because of a difference in switch on/off of the input voltage and the transistor gate. At a duty cycle of 0% the output voltage is at nearly 5V which is roughly the same as the input voltage, just losing some in the circuit, mostly the diode $D_12$. This is because the transistor remains closed at 0%, never receiving any voltage. In contrast, the transistor remains open continuously at a duty cycle of 100%, leading to the input voltage being short circuited with ground.
+In contrast to the frequency, the duty cycle maxes out its ability to amplify the voltage at around 40% (@fig17). This is because the switching of the transistor needs to happen at the right intervals for the amplifier to work. In the measurement this is at 40%, in contrast to the simulation, where the maximum amplification is achieved at 50%. This is probably because of a difference in switch on/off of the input voltage and the transistor gate. At a duty cycle of 0% the output voltage is at nearly 5 V which is roughly the same as the input voltage, just losing some in the circuit, mostly the diode $D_12$. This is because the transistor remains closed at 0%, never receiving any voltage. In contrast, the transistor remains open continuously at a duty cycle of 100%, leading to the input voltage being short circuited with ground.
 //#table(
 //  columns: 2,
 //  inset: 5pt,
