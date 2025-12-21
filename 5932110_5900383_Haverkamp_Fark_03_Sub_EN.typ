@@ -43,7 +43,7 @@ Milan Fark
 
 === Introduction
 
-In section 3.2.1., we looked at and simulated a basic MOSFET circuit shown in @fig1 and performed a voltage sweep on the gate of the MOSFET to analyze the output voltage and current through the resistor $R_D = 200 Omega$, which is shown in @fig2.
+In section 3.2.1., we looked at and simulated a basic MOSFET voltage inverting circuit shown in @fig1 and performed a voltage sweep on the gate of the MOSFET to analyze the output voltage and current through the resistor $R_D = 200 Omega$, which is shown in @fig2.
 
 We also sweeped _VDD_ from 0 V to 5 V to look at the current through $R_D$ for different voltages applied at the drain end of the transistor.
 
@@ -82,7 +82,9 @@ The Power MOSFET operates way under its normal current, ($I_D < 10$ mA here and 
 
 === Conclusion:
 
-We successfully simulated the circuit with a Power MOSFET. The calculated values for the resistance were $R_D approx 207 space Omega$
+We successfully simulated the circuit shown in @fig1. The calculated values for the resistance $R_D approx 207 space Omega$. @fig2 shows that below a threshold of around $V_(G S) approx 2.05$ V, the current is constant at $I_D approx 0$ mA and the output voltage is constant at $V_o approx 5$ V.
+
+For $2.03" V" <= V_(G S) <= 3.15" V"$ there is a transition stage, where the current grows exponentially and the voltage falls, until they stay constant at $I_D approx 25$ mA and $V_o approx 0$V.
 
 == 3.2.2. Measurement
 
@@ -100,7 +102,7 @@ We successfully simulated the circuit with a Power MOSFET. The calculated values
 
 === Text Questions:
 
-5 V through WaveForms is less than 5v on the board
+The deviation seen between "*$V_(i n)$*", "*actual $V_(i n)$*" and "*final $V_(i n)$*" in @vins happen for once because 5 V through WaveGen is less than 5 V when directly measured on the board and secondly because "final" $V_(i n)$ is connected to the circuit while "actual" $V_(i n)$ was to be measured stand alone.
 
 #figure(caption: [Different $V_(i n)$ values for given $I_D$])[
   #table(
@@ -112,10 +114,14 @@ We successfully simulated the circuit with a Power MOSFET. The calculated values
     [3.3], [2.11], [2.310], [2.320],
     [6.6], [2.17], [2.391], [2.377],
     [10.0], [2.21], [2.435], [2.418],
-  )]
+  )] <vins>
 
 
 === Conclusion
+
+We could see the same $I_D$ over $V_(D S)$ curve we simulated earlier, the first stable phase is $V_(D S) in [0 V; 1.8 V]$ and the transition stage is for $V_(D S) in [1.8 V; 2.25 V]$.
+
+For $V_(i n)$, the final values were slightly higher that the calculated ones, because of losses.
 
 = 3.3. MOS logic gates
 
@@ -221,7 +227,7 @@ The measured delay times make a lot of sense and are $t_(p d) approx 1.2 space m
 
 === Introduction
 
-In this section we used the MOSFET transistor to build a step up converter, to amplify a dc input voltage to a higher and slightly variable dc output voltage. This is accomplished by turning the transistor on and of via a variable input voltage. This leads to a wave effect between the transistor $M_1$ and the capacitor via the coils electromagnetic properties. In the simulation we gave the coil $L_1$ a series resistance of 10 $Omega$. 
+In this section we used the MOSFET transistor to build a step up converter, to amplify a dc input voltage to a higher and slightly variable dc output voltage. This is accomplished by turning the transistor on and of via a variable input voltage. This leads to a wave effect between the transistor $M_1$ and the capacitor via the coils electromagnetic properties. In the simulation we gave the coil $L_1$ a series resistance of 10 $Omega$.
 
 === Circuit Diagrams:
 
