@@ -238,10 +238,14 @@ In this section we used the MOSFET transistor to build a step up converter, to a
 
 === Text Questions:
 
+The characteristic starts by increasing rapidly, slowing down and increasing a stable state at $V_(o u t)$ $approx$ 33.4 V, which is an increase factor of 6.68. The curve is varying slightly over the whole time frame. 
 
+By varying the duty cycle, a change in amplification can be observed, the amplification being way less at 5 % compared to 60 % duty cycle, 20 % situated in the middle of the two amplifications. Out of curiosity we also simulated more duty cycles seeing a peak at $approx$ 50 %.
+
+In varying the frequencies there was also a notable difference in the amplification amount, which increased with increased frequency.
 
 === Conclusion:
-
+We saw the dependence of the increase in output voltage on the frequency and duty cycle of $V_p$
 
 = 3.4.2. Measurement
 
