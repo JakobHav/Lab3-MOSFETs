@@ -175,6 +175,16 @@ We successfully simulated the inverter. The falling and rising edges of $V_(i n)
 
 === Text Questions:
 
+#figure(caption: [Minimum and maximum voltages of $V_(i n)$ and $V_(o u t)$ in their steady states])[
+  #table(
+    columns: 3,
+    inset: 5pt,
+    align: horizon,
+    table.header([*signal*], [*minimum*], [*maximum*]),
+    [$V_(i n)$], [-0.09], [4.52],
+    [$V_(o u t)$], [-0.11], [5.03],
+  )] <minmax>
+
 === Conclusion
 
 We successfully measured the inverter signal we simulated earlier. \
