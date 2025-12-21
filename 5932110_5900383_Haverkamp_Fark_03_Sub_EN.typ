@@ -111,7 +111,7 @@ The deviation seen between "*$V_(i n)$*", "*$W 1 "values"$*" and "*final $V_(i n
     columns: 5,
     inset: 5pt,
     // align: horizon,
-    align: (left, left, center, center, center),
+    align: (left, center, center, center, center),
     table.header(
       [*$I_D$* \[mA\]], [*$V_(i n)$* \[V\]], [*$W 1 "val."$* \[V\]], [*final $V_(i n)$* [V]], [*early v.* [V]]
     ),
