@@ -228,8 +228,14 @@ Section 3.4.2. is about
 === Plots:
 #include "1.4.plot_real.typ"
 
+#pagebreak()
 === Text Questions:
 
+The output signal measured at $M p_21$ is a saw wave, which starts low and rises with each period, until reaching a maximum amplification and staying in the saw wave pattern.
+
+As seen in @fig16 the average output voltage rises with increasing frequency, because the amplification circuit is switching more often, therefor leading to a higher amplification.
+
+In contrast to the frequency, the duty cycle maxes out its ability to amplify the voltage at around 40% (@fig17). This is because the switching of the transistor needs to happen at the right intervals for the amplifier to work. In the measurement this is at 40%, in contrast to the simulation, where the maximum amplification is achieved at 50%. This is probably because of a difference in switch on/off of the input voltage and the transistor gate. At a duty cycle of 0% the output voltage is at nearly 5V which is roughly the same as the input voltage, just losing some in the circuit, mostly the diode $D_12$. This is because the transistor remains closed at 0%, never receiving any voltage. In contrast, the transistor remains open continuously at a duty cycle of 100%, leading to the input voltage being short circuited with ground.
 //#table(
 //  columns: 2,
 //  inset: 5pt,
