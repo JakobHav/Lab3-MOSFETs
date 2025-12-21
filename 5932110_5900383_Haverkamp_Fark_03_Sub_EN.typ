@@ -251,7 +251,7 @@ In varying the frequencies there was also a notable difference in the amplificat
 === Conclusion:
 We saw the dependence of the increase in output voltage on the frequency and duty cycle of $V_p$
 
-#v(1fr)
+#pagebreak()
 
 = 3.4.2. Measurement
 
