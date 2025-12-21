@@ -90,3 +90,14 @@
     lq.plot(t2.map(x => 1000 * (x) - 1), vo_f, mark: ".", mark-size: 0pt, label: [$V_(o u t)$]),
   )
 ] <fall_real>
+
+#let eps = .015
+#let vo_50pro = t.map(x => x * 1000).zip(vo_r).filter(x => calc.abs(x.at(1) - (5.03 - 0.11) / 2) < eps)
+
+// vi_fall_50% = -0.58444444
+// vo_rise_50% = 0.67555
+
+// vi_rise_50% = 0.025555555555555397
+// vo_fall_50% = 1.1755555555555548
+
+#let tpd_fall = 1.175555555 - 0.025555555
