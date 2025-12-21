@@ -210,7 +210,7 @@ In Chapter 3.3.2., we used the _MOSFET characteristics_ circuit on the board, wh
   )] <risetimes_real>
 
 
-As seen in @risetimes_real, the $t_(p d\(f a l l\))$ and $t_(p d\(r i s e\))$ times are not really comparable, as $t_(p d\(r i s e\))$ is much smaller and $t_(p d\(f a l l\))$ is much, much bigger and not negative.
+As seen in @risetimes_real, the $t_(p d\(f a l l\))$ and $t_(p d\(r i s e\))$ times are not really comparable to the ones of the simulation, as $t_(p d\(r i s e\))$ is much smaller and $t_(p d\(f a l l\))$ is much, much bigger and not negative.
 
 One reason for this is that the rise time of $V_(o u t)$ is much smaller than the simulated one. For the fall delay, the biggest reason is the fall time of $V_(i n)$ being $t_"f" = 0.16 space mu$s, instead of a simulated $t_"f" = 1 " ms"$. The measured delays make a lot more sense than the simulated ones.
 
@@ -227,7 +227,7 @@ The measured delay times make a lot of sense and are $t_(p d) approx 1.2 space m
 
 === Introduction
 
-In this section we used the MOSFET transistor to build a step up converter, to amplify a dc input voltage to a higher and slightly variable dc output voltage. This is accomplished by turning the transistor on and of via a variable input voltage. This leads to a wave effect between the transistor $M_1$ and the capacitor via the coils electromagnetic properties. In the simulation we gave the coil $L_1$ a series resistance of 10 $Omega$.
+In this section we used the MOSFET transistor to build a step up converter, to amplify a dc input voltage to a higher and slightly varying dc output voltage. This is accomplished by turning the transistor on and off via a variable input voltage. This leads to a wave effect between the transistor $M_1$ and the capacitor via the coils electromagnetic properties. In the simulation we gave the coil $L_1$ a series resistance of 10 $Omega$.
 
 === Circuit Diagrams:
 
@@ -238,7 +238,7 @@ In this section we used the MOSFET transistor to build a step up converter, to a
 
 === Text Questions:
 
-The characteristic starts by increasing rapidly, slowing down and increasing a stable state at $V_(o u t)$ $approx$ 33.4 V, which is an increase factor of 6.68. The curve is varying slightly over the whole time frame. 
+The characteristic starts by increasing rapidly, slowing down and increasing a stable state at $V_(o u t)$ $approx$ 33.4 V, which is an increase factor of 6.68. The curve is varying slightly over the whole time frame.
 
 By varying the duty cycle, a change in amplification can be observed, the amplification being way less at 5 % compared to 60 % duty cycle, 20 % situated in the middle of the two amplifications. Out of curiosity we also simulated more duty cycles seeing a peak at $approx$ 50 %.
 
