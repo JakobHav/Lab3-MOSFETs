@@ -60,25 +60,27 @@ We also sweeped _VDD_ from 0 V to 5 V to look at the current through $R_D$ for d
 
 The maximum current is at the end at $V_(G S) = 2.4$ V  and has a value of $I_D approx 24.87$ mA
 
-#table(
-  columns: 5,
-  inset: 5pt,
-  align: horizon,
-  table.header(
-    [*$I_D$* \[mA\]],
-    [*$V_(o u t)$* \[V\]],
-    [*$V_(G S)$* \[V\]],
-    [*$m$* #footnote[the slope of the linear fitted curves as shown in @fig3] [$"mA"/"V"$]],
-    [*$R_D$* [$Omega$]],
-  ),
-  [3.3], [4.34], [2.19], [4.7178], [211.96],
-  [6.6], [3.67], [2.23], [4.8166], [207.62],
-  [10.0], [2.99], [2.26], [4.8964], [204.23],
-)
+#figure(caption: [Different voltages and resistance for specific currents of $I_D$ = (3.3, 6.6, 10.0) mA])[
+  #table(
+    columns: 5,
+    inset: 5pt,
+    align: horizon,
+    table.header(
+      [*$I_D$* \[mA\]],
+      [*$V_(o u t)$* \[V\]],
+      [*$V_(G S)$* \[V\]],
+      [*$m$* #footnote[the slope of the linear fitted curves as shown in @fig3] [$"mA"/"V"$]],
+      [*$R_D$* [$Omega$]],
+    ),
+    [3.3], [4.34], [2.19], [4.7178], [211.96],
+    [6.6], [3.67], [2.23], [4.8166], [207.62],
+    [10.0], [2.99], [2.26], [4.8964], [204.23],
+  )
+] <tab1>
 
-We calculated a value of $V_(o u t) =$ 3.68 V for $I_D = 6.6$ mA and simulated $V_(o u t) =$ 3.67 V, so pretty close! Also, we calculated values for $R_D$, which are around $207 space Omega$, which is also very close to the actual value $R_D = 200 space Omega$
+We calculated a value of $V_(o u t) =$ 3.68 V for $I_D = 6.6$ mA in the preperation and simulated $V_(o u t) =$ 3.67 V as seen in @tab1, so pretty close! Also, we calculated values for $R_D$, which are around $207 space Omega$, which is also very close to the actual value $R_D = 200 space Omega$
 
-The Power MOSFET operates way under its normal current, ($I_D < 10$ mA here and $I_D > 5$ A normally), which is why it shows slightly different behaviour than a normal MOSFET would.
+The power MOSFET operates way under its normal current, ($I_D < 10$ mA here and $I_D > 5$ A normally), which is why it shows slightly different behaviour than a normal MOSFET.
 
 === Conclusion:
 
@@ -102,7 +104,7 @@ For $2.03" V" <= V_(G S) <= 3.15" V"$ there is a transition stage, where the cur
 
 === Text Questions:
 
-The deviation seen between "*$V_(i n)$*", "*actual $V_(i n)$*" and "*final $V_(i n)$*" in @vins happen for once because 5 V through WaveGen is less than 5 V when directly measured on the board and secondly because "final" $V_(i n)$ is connected to the circuit while "actual" $V_(i n)$ was to be measured stand alone.
+The deviation seen between "*$V_(i n)$*", "*$W 1 "values"$*" and "*final $V_(i n)$*" in @vins happen for once because 5 V through WaveGen is less than 5 V when directly measured on the board and secondly because "final" $V_(i n)$ is connected to the circuit while WaveGen $V_(i n)$ was to be measured stand alone.
 
 #figure(caption: [Different $V_(i n)$ values for given $I_D$])[
   #table(
@@ -110,7 +112,7 @@ The deviation seen between "*$V_(i n)$*", "*actual $V_(i n)$*" and "*final $V_(i
     inset: 5pt,
     // align: horizon,
     align: (left, left, center, center),
-    table.header([*$I_D$* \[mA\]], [*$V_(i n)$* \[V\]], [*actual $V_(i n)$* \[V\]], [*final $V_(i n)$* [V]]),
+    table.header([*$I_D$* \[mA\]], [*$V_(i n)$* \[V\]], [*$W 1 "values"$* \[V\]], [*final $V_(i n)$* [V]]),
     [3.3], [2.11], [2.310], [2.320],
     [6.6], [2.17], [2.391], [2.377],
     [10.0], [2.21], [2.435], [2.418],
