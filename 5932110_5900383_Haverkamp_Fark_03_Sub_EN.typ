@@ -108,14 +108,16 @@ The deviation seen between "*$V_(i n)$*", "*$W 1 "values"$*" and "*final $V_(i n
 
 #figure(caption: [Different $V_(i n)$ values for given $I_D$])[
   #table(
-    columns: 4,
+    columns: 5,
     inset: 5pt,
     // align: horizon,
     align: (left, left, center, center),
-    table.header([*$I_D$* \[mA\]], [*$V_(i n)$* \[V\]], [*$W 1 "values"$* \[V\]], [*final $V_(i n)$* [V]]),
-    [3.3], [2.11], [2.310], [2.320],
-    [6.6], [2.17], [2.391], [2.377],
-    [10.0], [2.21], [2.435], [2.418],
+    table.header(
+      [*$I_D$* \[mA\]], [*$V_(i n)$* \[V\]], [*$W 1 "val."$* \[V\]], [*final $V_(i n)$* [V]], [*early v.* [V]]
+    ),
+    [3.3], [2.11], [2.310], [2.320], [-9.69],
+    [6.6], [2.17], [2.391], [2.377], [-9.52],
+    [10.0], [2.21], [2.435], [2.418], [-8.6],
   )] <vins>
 
 
@@ -248,6 +250,8 @@ In varying the frequencies there was also a notable difference in the amplificat
 
 === Conclusion:
 We saw the dependence of the increase in output voltage on the frequency and duty cycle of $V_p$
+
+#v(1fr)
 
 = 3.4.2. Measurement
 
