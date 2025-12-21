@@ -216,7 +216,7 @@ We added a series resistance of 10 $Omega$ for the inductor.
 
 === Introduction
 
-Section 3.4.2. is about
+Section 3.4.2 is about the measurement of the step up converter and the interpretation of the output voltage in relation to the duty cycle and the frequency of the voltage applied at the gate of the transistor.
 
 === Circuit Diagrams:
 
@@ -253,3 +253,4 @@ In contrast to the frequency, the duty cycle maxes out its ability to amplify th
 //)
 
 === Conclusion
+The measurements roughly corresponded with our simulations, showing the relationship between duty cycle and frequency of the applied voltage and the output voltage of the step up converter.
