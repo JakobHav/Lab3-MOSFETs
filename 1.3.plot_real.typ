@@ -90,5 +90,3 @@
     lq.plot(t2.map(x => 1000 * (x) - 1), vo_f, mark: ".", mark-size: 0pt, label: [$V_(o u t)$]),
   )
 ] <fall_real>
-
-
