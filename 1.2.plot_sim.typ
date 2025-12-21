@@ -38,7 +38,7 @@
       lim: (-0.1, 26),
     ),
   )
-]
+] <fig2>
 
 #let value_mA = 3.3
 #let precision = 5e-5

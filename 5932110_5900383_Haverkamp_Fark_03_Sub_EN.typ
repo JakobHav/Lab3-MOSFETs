@@ -43,6 +43,10 @@ Milan Fark
 
 === Introduction
 
+In section 3.2.1., we looked at and simulated a basic MOSFET circuit shown in @fig1 and performed a voltage sweep on the gate of the MOSFET to analyze the output voltage and current through the resistor $R_D = 200 Omega$, which is shown in @fig2.
+
+We also sweeped _VDD_ from 0 V to 5 V to look at the current through $R_D$ for different voltages applied at the drain end of the transistor.
+
 === Circuit Diagrams:
 
 #figure(caption: [LTSpice _MOSFET Characteristics_ circuit diagram])[
@@ -63,7 +67,7 @@ The maximum current is at the end at $V_(G S) = 2.4$ V  and has a value of $I_D 
   table.header(
     [*$I_D$* \[mA\]],
     [*$V_(o u t)$* \[V\]],
-    [*$V_(i n)$* \[V\]],
+    [*$V_(G S)$* \[V\]],
     [*$m$* #footnote[the slope of the linear fitted curves as shown in @fig3] [$"mA"/"V"$]],
     [*$R_D$* [$Omega$]],
   ),
@@ -72,14 +76,13 @@ The maximum current is at the end at $V_(G S) = 2.4$ V  and has a value of $I_D 
   [10.0], [2.99], [2.26], [4.8964], [204.23],
 )
 
-We calculated a value of $V_(o u t) =$ 3.68 V for $I_D = 6.6$ mA and simulated $V_(o u t) =$ 3.67 V, so pretty close!
+We calculated a value of $V_(o u t) =$ 3.68 V for $I_D = 6.6$ mA and simulated $V_(o u t) =$ 3.67 V, so pretty close! Also, we calculated values for $R_D$, which are around $207 space Omega$, which is also very close to the actual value $R_D = 200 space Omega$
 
-The Power MOSFET operates way under its normal current, ($I_D < 10$ mA here and $I_D > 5$ A normally), which is why it shows different behaviour.
-
-
-
+The Power MOSFET operates way under its normal current, ($I_D < 10$ mA here and $I_D > 5$ A normally), which is why it shows slightly different behaviour than a normal MOSFET would.
 
 === Conclusion:
+
+We successfully simulated the circuit with a Power MOSFET. The calculated values for the resistance were $R_D approx 207 space Omega$
 
 == 3.2.2. Measurement
 
@@ -120,7 +123,7 @@ The Power MOSFET operates way under its normal current, ($I_D < 10$ mA here and 
 
 === Introduction
 
-In this chapter, we used a MOSFET to create a logic gate, more specifically an inverter. The inverter circuit is shown in @mosgate. The input signal is connected to the gate of the MOSFET, the output signal is connected to the drain, as well as to _VDD_ $= 5$ V through a resistor $R_D = 200 Omega$. The source of the tranisitor is connected to _GND_, so when the MOSFET opens, _GND_ is connected to $V_(o u t)$ and the output signal is _LOW_, when it is closed the output signal is _HIGH_.
+In this chapter, we used a MOSFET to create a logic gate, more specifically an inverter. The inverter circuit is shown in @mosgate. The input signal is connected to the gate of the MOSFET, the output signal is connected to the drain, as well as to _VDD_ $= 5$ V through a resistor $R_D = 200 space Omega$. The source of the tranisitor is connected to _GND_, so when the MOSFET opens, _GND_ is connected to $V_(o u t)$ and the output signal is _LOW_, when it is closed the output signal is _HIGH_.
 
 === Circuit Diagrams:
 
