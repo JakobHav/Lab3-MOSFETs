@@ -54,7 +54,7 @@ Milan Fark
 
 === Text Questions:
 
-The maximum current is with $V_(G S) = 2.4$ V at the end and has a value of $I_D approx 24.87$ mA
+The maximum current is at the end at $V_(G S) = 2.4$ V  and has a value of $I_D approx 24.87$ mA
 
 #table(
   columns: 5,
@@ -99,16 +99,17 @@ The Power MOSFET operates way under its normal current, ($I_D < 10$ mA here and 
 
 5 V through WaveForms is less than 5v on the board
 
-#table(
-  columns: 4,
-  inset: 5pt,
-  // align: horizon,
-  align: (left, left, center, center),
-  table.header([*$I_D$* \[mA\]], [*$V_(i n)$* \[V\]], [*actual $V_(i n)$* \[V\]], [*final $V_(i n)$*]),
-  [3.3], [2.11], [2.310], [2.320],
-  [6.6], [2.17], [2.391], [2.377],
-  [10.0], [2.21], [2.435], [2.418],
-)
+#figure(caption: [Different $V_(i n)$ values for given $I_D$])[
+  #table(
+    columns: 4,
+    inset: 5pt,
+    // align: horizon,
+    align: (left, left, center, center),
+    table.header([*$I_D$* \[mA\]], [*$V_(i n)$* \[V\]], [*actual $V_(i n)$* \[V\]], [*final $V_(i n)$* [V]]),
+    [3.3], [2.11], [2.310], [2.320],
+    [6.6], [2.17], [2.391], [2.377],
+    [10.0], [2.21], [2.435], [2.418],
+  )]
 
 
 === Conclusion
@@ -119,12 +120,14 @@ The Power MOSFET operates way under its normal current, ($I_D < 10$ mA here and 
 
 === Introduction
 
+In this chapter, we used a MOSFET to create a logic gate, more specifically an inverter. The inverter circuit is shown in @mosgate. The input signal is connected to the gate of the MOSFET, the output signal is connected to the drain, as well as to _VDD_ $= 5$ V through a resistor $R_D = 200 Omega$. The source of the tranisitor is connected to _GND_, so when the MOSFET opens, _GND_ is connected to $V_(o u t)$ and the output signal is _LOW_, when it is closed the output signal is _HIGH_.
+
 === Circuit Diagrams:
 
 #figure(caption: [LTSpice _MOS logic gate_ circuit diagram])[
   #image("assets/3.3.1.jpg", width: 35%)
 
-]<fig9>
+]<mosgate>
 
 === Plots:
 
@@ -132,16 +135,32 @@ The Power MOSFET operates way under its normal current, ($I_D < 10$ mA here and 
 
 === Text Questions:
 
-#table(
-  columns: 3,
-  inset: 5pt,
-  align: horizon,
-  table.header([*signal*], [*rise time*], [*fall time*]),
-  [$V_(i n)$], [1 $mu$s], [1 ms],
-  [$V_(o u t)$], [80 $mu$s], [0.12 $mu$s],
-)
+The rising edge can be seen in @rise. $V_(i n)$ has a very linear rising edge, where as $V_(o u t)$ rised quite unevenly, and rises roughly 80 times slower than $V_(i n)$, as seen in @risetimes.
+
+The falling edge of $V_(i n)$ is also very linear, $V_(o u t)$ is also linear, but a little round at the beginning. The fall time of $V_(o u t)$ is much faster than that of $V_(i n)$, by a factor of $m approx 10000$, as seen in @risetimes.
+
+#figure(caption: [Rise and fall times for $V_(i n)$ and $V_(o u t)$])[
+  #table(
+    columns: 3,
+    inset: 5pt,
+    align: horizon,
+    table.header([*signal*], [*rise time*], [*fall time*]),
+    [$V_(i n)$], [1 $mu$s], [1 ms],
+    [$V_(o u t)$], [80 $mu$s], [0.12 $mu$s],
+    [$t_(p d)$], [42.11 $mu$s], [-27.32 ns],
+  )] <risetimes>
+
+To determine the propagation delays is difficult becase of the massive differences in fall time (1 ms and 0.12 $mu$s). This leads possibly negative times when we look at $V_(i n) = 1/2$_VDD_ vs $V_(o u t) = 1/2$_VDD_, as we can see for $t_(p d\(f a l l\))$ in @risetimes. The value is caluclated by:
+
+$ V_(o u t)(t_1) = 1/2 V D D \ V_(i n)(t_i) = 1/2 V D D \ t_(p d) = t_i - t_o $
+
+
+
 
 === Conclusion:
+
+We successfully simulated the inverter. The falling and rising edges of $V_(i n)$ were very linear, the ones of $V_(o u t)$ had round curves to them. $V_(i n)$ has a fast rise, but very slow fall time, the inverted signal has a very very fast fall and a relatively slow rise time at $t = 80 space mu$s.
+
 = 3.3.2. Measurement
 
 === Introduction
@@ -157,6 +176,9 @@ The Power MOSFET operates way under its normal current, ($I_D < 10$ mA here and 
 === Text Questions:
 
 === Conclusion
+
+We successfully measured the inverter signal we simulated earlier. \
+The rise and fall edges are similar to the simulation, although the fall time of $V_in$ is faster by orders of magnitude.
 
 = 3.4. Step up converter
 
@@ -202,15 +224,15 @@ Section 3.4.2. is about
   inset: 5pt,
   align: horizon,
   table.header([*frequency*], [*average voltage*]),
-  [100],[4.69],
-  [200],[4.74],
-  [500],[4.78],
-  [1k],[6.27],
-  [2k],[8.44],
-  [5k],[12.99],
-  [10k],[18.52],
-  [20k],[26.67],
-  [50k],[32.10],
+  [100], [4.69],
+  [200], [4.74],
+  [500], [4.78],
+  [1k], [6.27],
+  [2k], [8.44],
+  [5k], [12.99],
+  [10k], [18.52],
+  [20k], [26.67],
+  [50k], [32.10],
 )
 
 === Conclusion

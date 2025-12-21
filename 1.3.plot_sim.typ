@@ -91,3 +91,56 @@
 ] <fall>
 
 
+#show: lq.theme.skyline
+
+#figure(caption: [Falling edge transition of the inverted signal $V_(o u t)$ and input  signal $V_(i n)$])[
+  #lq.diagram(
+    width: 80%,
+    height: 24%,
+    xlabel: [relative *$t$* for *$V_(o u t)$* [ms]],
+    ylabel: [*amplitude* [V]],
+    legend: (position: right + horizon),
+    // // ylim: (-0.5, 5.5),
+    // xlim: (-1.21, 1.0),
+    cycle: (
+      it => {
+        set lq.style(stroke: (paint: blue.darken(-20%).transparentize(20%), thickness: 1.5pt, dash: "solid"))
+        it
+      },
+      it => {
+        set lq.style(stroke: (paint: red.darken(0%).transparentize(40%), dash: "solid", thickness: 1.5pt))
+        it
+      },
+    ),
+
+    yaxis: (
+      mirror: false,
+      exponent: 0,
+      subticks: 4,
+    ),
+    lq.xaxis(
+      position: top,
+      label: [relative *$t$* for *$V_(i n)$* [$m$s]],
+      lq.plot(t, vi, mark: ".", label: [$V_(i n)$], mark-size: 0pt),
+      // lim: (-1.21, 1.00),
+    ),
+
+
+    // lq.plot(t, vi, mark: ".", mark-size: 0pt, label: [$V_(i n)$]),
+    lq.plot(t, vo, mark: ".", mark-size: 0pt, label: [$V_(o u t)$]),
+  )
+] <fall>
+
+
+#let eps = 1
+#let vo_50pro = t.zip(vi).filter(x => x.at(0) > 18 and calc.abs(x.at(1) - 2.5) < 0.1)
+
+// vi_fall_50% = 20.50490625000002
+// vo_rise_50% = 20.547016933887136
+
+// vi_rise_50% = 10.00049942812723
+// vo_fall_50% = 10.00047210301474
+
+#let tpd_rise = 20.547016933887136 - 20.50490625000002
+
+#let tpd_fall = 10.00047210301474 - 10.00049942812723
